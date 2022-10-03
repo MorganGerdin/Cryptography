@@ -1,0 +1,2 @@
+Spares:
+ - collection/test_longest_sequence.py
