@@ -3,7 +3,24 @@
 # A hashtag is defined as a group of characters that starts with # and is ended by a whitespace.
 # Ignore special characters (!, ,, ., ?,, etc.) when processing hashtags
 def extract_hashtags(message):
-    return []
+    message = message.split(" ")
+    count = 0
+    hashList = []
+    for item in message:
+        for char in item:
+            count += 1
+            if char == "#":
+                flag = True
+            else:
+                flag = False
+
+            if flag:
+                hashList.append(item)
+
+    hashList = [ele.replace("#", '').replace("!", "").replace(",", "").replace(".", "").replace("?", "") for ele in
+                hashList]
+
+    return hashList
 
 
 def test_extract_hashtags():
