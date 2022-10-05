@@ -16,3 +16,12 @@ def is_sequential_integer(i):
 def test_is_sequential_integer():
     assert is_sequential_integer(123456789)
     assert not is_sequential_integer(768)
+
+def test2_is_sequential_integer():
+    assert is_sequential_integer(000)
+    assert not is_sequential_integer(32557554637547326)
+
+
+def test3_is_sequential_integer():
+    assert not is_sequential_integer(8765431)
+    assert is_sequential_integer(178)
