@@ -24,4 +24,8 @@ def test2_is_sequential_integer():
 
 def test3_is_sequential_integer():
     assert not is_sequential_integer(8765431)
-    assert is_sequential_integer(178)
+    assert is_sequential_integer(17779)
+
+def test4_is_sequential_integer():
+    assert not is_sequential_integer(87654431)
+    assert is_sequential_integer(1789)
