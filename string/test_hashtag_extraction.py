@@ -25,3 +25,16 @@ def extract_hashtags(message):
 
 def test_extract_hashtags():
     assert extract_hashtags("Hello #everybody, I love eating #pizza! #goals") == [ "everybody", "pizza", "goals"]
+
+
+def test2_extract_hashtags():
+    assert extract_hashtags("#Hello peoples, #loveEating #iceCreaM!!!") == ["Hello", "loveEating", "iceCreaM"]
+    assert not extract_hashtags("#IDK") == ["#IDK"]
+
+
+
+
+
+
+
+
